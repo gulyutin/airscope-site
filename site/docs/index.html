@@ -335,6 +335,18 @@ footer .sp{margin-left:auto}
 @media (max-width:980px){.dgrid{grid-template-columns:1fr;gap:24px;padding-block:32px 72px}.toc{position:static;border-left:0;padding-left:0;flex-direction:row;flex-wrap:wrap;gap:8px}.toc-h{width:100%;margin-bottom:2px}.toc a{background:#fff;border:1px solid var(--rule);border-radius:99px;padding:7px 13px;font-size:14px}.fgrid,.req{grid-template-columns:1fr}}
 @media (max-width:640px){.kv div,.rc .kv div{grid-template-columns:1fr;gap:4px}.doc{grid-template-columns:44px minmax(0,1fr)}.doc .todo{grid-column:2}.dico{width:44px;height:52px}.dt td:first-child{white-space:normal}}
 </style>
+<style>
+/* знаки AirScope и модулей */
+.top .brand{display:flex;align-items:center;gap:11px;width:auto}
+.top .brand img.mk{width:32px;height:32px;display:block;flex:none}
+.top .brand svg.lg{width:132px}
+footer .fb{display:flex;align-items:center;gap:11px}
+footer .fb img{width:30px;height:30px;display:block}
+.mod .row img.mm{width:44px;height:44px;flex:none;display:block}
+.ws .tb .wsb{display:flex;align-items:center;gap:9px}
+.ws .tb .wsb img{width:22px;height:22px;display:block}
+@media (max-width:880px){.top .brand svg.lg{width:112px}.top .brand img.mk{width:28px;height:28px}}
+</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><g id="scope">
@@ -401,7 +413,7 @@ footer .sp{margin-left:auto}
 </g></defs></svg>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="AirScope"><svg class="lg" viewBox="0 0 432 65" style="color:#fff"><use href="#scope"/></svg></a>
+    <a class="brand" href="/" aria-label="AirScope"><img class="mk" src="/brand/airscope-mark.svg" alt=""><svg class="lg" viewBox="0 0 432 65" style="color:#fff"><use href="#scope"/></svg></a>
     <nav aria-label="Разделы">
       <a href="/#how">Как работает</a>
       <a href="/#modules">Модули</a>
@@ -579,7 +591,7 @@ footer .sp{margin-left:auto}
 
 <footer>
   <div class="wrap">
-    <svg class="lg" viewBox="0 0 432 65" aria-label="AirScope"><use href="#scope"/></svg>
+    <span class="fb"><img src="/brand/airscope-mark.svg" alt=""><svg class="lg" viewBox="0 0 432 65" aria-label="AirScope"><use href="#scope"/></svg></span>
     <span>AirBIM · AirInfra · AirHeritage</span>
     <a href="/docs/" style="color:inherit">Документация</a>
     <span class="sp">© 2026 AirScope · ИКИТ СФУ</span>

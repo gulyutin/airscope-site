@@ -280,6 +280,18 @@ footer .sp{margin-left:auto}
 .mailcard .addr{font-size:clamp(24px,3vw,34px);font-weight:600;color:#fff;letter-spacing:-.01em;word-break:break-all;user-select:all}
 .mailcard p{margin:0;color:var(--on-dark-2)}
 </style>
+<style>
+/* знаки AirScope и модулей */
+.top .brand{display:flex;align-items:center;gap:11px;width:auto}
+.top .brand img.mk{width:32px;height:32px;display:block;flex:none}
+.top .brand svg.lg{width:132px}
+footer .fb{display:flex;align-items:center;gap:11px}
+footer .fb img{width:30px;height:30px;display:block}
+.mod .row img.mm{width:44px;height:44px;flex:none;display:block}
+.ws .tb .wsb{display:flex;align-items:center;gap:9px}
+.ws .tb .wsb img{width:22px;height:22px;display:block}
+@media (max-width:880px){.top .brand svg.lg{width:112px}.top .brand img.mk{width:28px;height:28px}}
+</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><g id="scope">
@@ -347,7 +359,7 @@ footer .sp{margin-left:auto}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="AirScope"><svg class="lg" viewBox="0 0 432 65" style="color:#fff"><use href="#scope"/></svg></a>
+    <a class="brand" href="#top" aria-label="AirScope"><img class="mk" src="/brand/airscope-mark.svg" alt=""><svg class="lg" viewBox="0 0 432 65" style="color:#fff"><use href="#scope"/></svg></a>
     <nav aria-label="Разделы">
       <a href="#how">Как работает</a>
       <a href="#modules">Модули</a>
@@ -432,7 +444,7 @@ footer .sp{margin-left:auto}
         <p class="lead">Облако точек и BIM-модель включаются слоями. Отклонения больше допуска собраны в список с привязкой к элементам, а шкала съемок показывает, как объект менялся от даты к дате.</p>
       </div>
       <div class="ws" role="img" aria-label="Концепт интерфейса рабочего места: слои, 3D-сцена, список отклонений и шкала съемок">
-        <div class="tb"><svg class="lg" viewBox="0 202 295 64"><use href="#mods"/></svg><span class="crumb">Академгородок › Съемка 01.04.2026</span><span class="sp">Сравнить с 23.03.2026</span><span class="rep">Сформировать отчет</span></div>
+        <div class="tb"><span class="wsb"><img src="/brand/airbim-mark.svg" alt=""><svg class="lg" viewBox="0 202 295 64"><use href="#mods"/></svg></span><span class="crumb">Академгородок › Съемка 01.04.2026</span><span class="sp">Сравнить с 23.03.2026</span><span class="rep">Сформировать отчет</span></div>
         <div class="body">
           <div class="side">
             <h4>Слои</h4>
@@ -486,9 +498,9 @@ footer .sp{margin-left:auto}
         <p class="lead">Общее ядро обработки и анализа, а модули настроены под задачи отрасли: от строительного контроля до объектов наследия.</p>
       </div>
       <div class="mods">
-        <article class="mod"><div class="row"><svg class="lg" viewBox="0 202 295 64" aria-label="AirBIM"><use href="#mods"/></svg><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="14.0" cy="6.2" r="3.4"/><circle cx="21.2" cy="6.2" r="3.4"/><circle cx="14.0" cy="13.4" r="3.4"/><circle cx="21.2" cy="13.4" r="3.4"/><circle cx="14.0" cy="20.6" r="3.4"/><circle cx="21.2" cy="20.6" r="3.4"/><circle cx="14.0" cy="27.8" r="3.4"/><circle cx="21.2" cy="27.8" r="3.4"/><circle cx="14.0" cy="35.0" r="3.4"/><circle cx="21.2" cy="35.0" r="3.4"/><circle cx="6.8" cy="42.2" r="3.4"/><circle cx="14.0" cy="42.2" r="3.4"/><circle cx="21.2" cy="42.2" r="3.4"/><circle cx="28.4" cy="42.2" r="3.4"/><circle cx="35.6" cy="42.2" r="3.4"/><circle cx="42.8" cy="42.2" r="3.4"/><circle cx="50.0" cy="42.2" r="3.4"/><circle cx="57.2" cy="42.2" r="3.4"/><circle cx="6.8" cy="27.8" r="3.4"/><circle cx="28.4" cy="27.8" r="3.4"/><circle cx="35.6" cy="27.8" r="3.4"/><circle cx="42.8" cy="27.8" r="3.4"/><circle cx="50.0" cy="27.8" r="3.4"/><circle cx="57.2" cy="27.8" r="3.4"/><circle cx="6.8" cy="13.4" r="3.4"/><circle cx="28.4" cy="13.4" r="3.4"/><circle cx="35.6" cy="13.4" r="3.4"/><circle cx="42.8" cy="13.4" r="3.4"/><circle cx="50.0" cy="13.4" r="3.4"/><circle cx="57.2" cy="13.4" r="3.4"/><circle cx="6.8" cy="49.4" r="3.4"/><circle cx="14.0" cy="49.4" r="3.4"/><circle cx="21.2" cy="49.4" r="3.4"/><circle cx="28.4" cy="49.4" r="3.4"/><circle cx="35.6" cy="49.4" r="3.4"/><circle cx="42.8" cy="49.4" r="3.4"/><circle cx="50.0" cy="49.4" r="3.4"/><circle cx="57.2" cy="49.4" r="3.4"/><circle cx="14.0" cy="56.6" r="3.4"/><circle cx="21.2" cy="56.6" r="3.4"/><circle cx="35.6" cy="6.2" r="3.4"/><circle cx="35.6" cy="20.6" r="3.4"/><circle cx="35.6" cy="35.0" r="3.4"/><circle cx="35.6" cy="56.6" r="3.4"/><circle cx="50.0" cy="6.2" r="3.4"/><circle cx="50.0" cy="20.6" r="3.4"/><circle cx="50.0" cy="35.0" r="3.4"/><circle cx="50.0" cy="56.6" r="3.4"/></svg></div><p>Строительный контроль, сопоставление с BIM-моделью, фиксация прогресса, выявление отклонений.</p><ul><li>План-факт</li><li>BIM + чертежи</li><li>Приемка</li></ul></article>
-        <article class="mod"><div class="row"><svg class="lg" viewBox="0 310 410 64" aria-label="AirInfra"><use href="#mods"/></svg><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="20.8" cy="6.2" r="3.4"/><circle cx="28.0" cy="6.2" r="3.4"/><circle cx="35.2" cy="6.2" r="3.4"/><circle cx="42.4" cy="6.2" r="3.4"/><circle cx="6.4" cy="13.4" r="3.4"/><circle cx="13.6" cy="13.4" r="3.4"/><circle cx="20.8" cy="13.4" r="3.4"/><circle cx="42.4" cy="13.4" r="3.4"/><circle cx="49.6" cy="13.4" r="3.4"/><circle cx="49.6" cy="20.6" r="3.4"/><circle cx="6.4" cy="27.8" r="3.4"/><circle cx="13.6" cy="27.8" r="3.4"/><circle cx="20.8" cy="27.8" r="3.4"/><circle cx="28.0" cy="27.8" r="3.4"/><circle cx="49.6" cy="27.8" r="3.4"/><circle cx="56.8" cy="27.8" r="3.4"/><circle cx="35.2" cy="35.0" r="3.4"/><circle cx="56.8" cy="35.0" r="3.4"/><circle cx="56.8" cy="35.0" r="3.4"/><circle cx="6.4" cy="42.2" r="3.4"/><circle cx="13.6" cy="42.2" r="3.4"/><circle cx="20.8" cy="42.2" r="3.4"/><circle cx="42.4" cy="42.2" r="3.4"/><circle cx="28.0" cy="49.4" r="3.4"/><circle cx="42.4" cy="49.4" r="3.4"/><circle cx="49.6" cy="49.4" r="3.4"/><circle cx="28.0" cy="56.6" r="3.4"/><circle cx="49.6" cy="56.6" r="3.4"/></svg></div><p>Мониторинг инфраструктуры: дороги, промышленные площадки, линейные объекты, инженерные сооружения.</p><ul><li>Изменения</li><li>Объемы</li><li>Линейные объекты</li></ul></article>
-        <article class="mod"><div class="row"><svg class="lg" viewBox="0 425 576 64" aria-label="AirHeritage"><use href="#mods"/></svg><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="20.8" cy="6.6" r="3.4"/><circle cx="28.0" cy="6.6" r="3.4"/><circle cx="35.2" cy="6.6" r="3.4"/><circle cx="42.4" cy="6.6" r="3.4"/><circle cx="13.6" cy="13.8" r="3.4"/><circle cx="20.8" cy="13.8" r="3.4"/><circle cx="28.0" cy="13.8" r="3.4"/><circle cx="35.2" cy="13.8" r="3.4"/><circle cx="42.4" cy="13.8" r="3.4"/><circle cx="49.6" cy="13.8" r="3.4"/><circle cx="6.4" cy="21.0" r="3.4"/><circle cx="13.6" cy="21.0" r="3.4"/><circle cx="20.8" cy="21.0" r="3.4"/><circle cx="42.4" cy="21.0" r="3.4"/><circle cx="49.6" cy="21.0" r="3.4"/><circle cx="56.8" cy="21.0" r="3.4"/><circle cx="6.4" cy="28.2" r="3.4"/><circle cx="13.6" cy="28.2" r="3.4"/><circle cx="20.8" cy="28.2" r="3.4"/><circle cx="42.4" cy="28.2" r="3.4"/><circle cx="49.6" cy="28.2" r="3.4"/><circle cx="56.8" cy="28.2" r="3.4"/><circle cx="13.6" cy="35.4" r="3.4"/><circle cx="20.8" cy="35.4" r="3.4"/><circle cx="28.0" cy="35.4" r="3.4"/><circle cx="35.2" cy="35.4" r="3.4"/><circle cx="42.4" cy="35.4" r="3.4"/><circle cx="49.6" cy="35.4" r="3.4"/><circle cx="20.8" cy="42.6" r="3.4"/><circle cx="28.0" cy="42.6" r="3.4"/><circle cx="35.2" cy="42.6" r="3.4"/><circle cx="42.4" cy="42.6" r="3.4"/><circle cx="28.0" cy="49.8" r="3.4"/><circle cx="35.2" cy="49.8" r="3.4"/><circle cx="28.0" cy="57.0" r="3.4"/><circle cx="35.2" cy="57.0" r="3.4"/></svg></div><p>Документирование и мониторинг объектов культурного наследия, исторической среды и сложных пространственных объектов.</p><ul><li>Фиксация состояния</li><li>Сравнение по годам</li></ul></article>
+        <article class="mod"><div class="row"><svg class="lg" viewBox="0 202 295 64" aria-label="AirBIM"><use href="#mods"/></svg><img class="mm" src="/brand/airbim-mark.svg" alt=""></div><p>Строительный контроль, сопоставление с BIM-моделью, фиксация прогресса, выявление отклонений.</p><ul><li>План-факт</li><li>BIM + чертежи</li><li>Приемка</li></ul></article>
+        <article class="mod"><div class="row"><svg class="lg" viewBox="0 310 410 64" aria-label="AirInfra"><use href="#mods"/></svg><img class="mm" src="/brand/airinfra-mark.svg" alt=""></div><p>Мониторинг инфраструктуры: дороги, промышленные площадки, линейные объекты, инженерные сооружения.</p><ul><li>Изменения</li><li>Объемы</li><li>Линейные объекты</li></ul></article>
+        <article class="mod"><div class="row"><svg class="lg" viewBox="0 425 576 64" aria-label="AirHeritage"><use href="#mods"/></svg><img class="mm" src="/brand/airheritage-mark.svg" alt=""></div><p>Документирование и мониторинг объектов культурного наследия, исторической среды и сложных пространственных объектов.</p><ul><li>Фиксация состояния</li><li>Сравнение по годам</li></ul></article>
       </div>
     </div>
   </section>
@@ -583,7 +595,7 @@ footer .sp{margin-left:auto}
 
 <footer>
   <div class="wrap">
-    <svg class="lg" viewBox="0 0 432 65" aria-label="AirScope"><use href="#scope"/></svg>
+    <span class="fb"><img src="/brand/airscope-mark.svg" alt=""><svg class="lg" viewBox="0 0 432 65" aria-label="AirScope"><use href="#scope"/></svg></span>
     <span>AirBIM · AirInfra · AirHeritage</span>
     <a href="/docs/" style="color:inherit">Документация</a>
     <span class="sp">© 2026 AirScope · ИКИТ СФУ</span>
