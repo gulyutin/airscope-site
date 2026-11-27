@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>AirScope</title>
+  <defs>
+    <clipPath id="a3-scope-d-back"><rect x="10" y="6" width="30" height="32" rx="1.5"/></clipPath>
+  </defs>
+  <g transform="translate(32 32) skewX(-15) translate(-32 -32)">
+    <!-- проектный слой (задний) -->
+    <rect x="10" y="6" width="30" height="32" rx="1.5" fill="#FFFFFF" fill-opacity="0.42"/>
+    <!-- фактический слой (передний) -->
+    <rect x="24" y="26" width="30" height="32" rx="1.5" fill="#FFFFFF"/>
+    <!-- зона сопоставления -->
+    <g clip-path="url(#a3-scope-d-back)">
+      <rect x="24" y="26" width="30" height="32" rx="1.5" fill="#36C3A0"/>
+    </g>
+  </g>
+</svg>
