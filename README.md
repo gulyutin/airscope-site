@@ -6,20 +6,36 @@
 
 ## Как работает выкладка
 
-Каждый пуш в ветку `main`, который меняет `site/`, запускает GitHub Actions (`.github/workflows/deploy.yml`). Действие копирует папку `site/` на хостинг REG.RU по FTPS и передает только изменившиеся файлы. Выкладку можно запустить и вручную: вкладка Actions → «Выкладка на air-scope.ru» → Run workflow.
+Сайт отдается с сервера «Практики полета» в Рег.облаке (80.78.248.203, Caddy). Схема «сервер тянет»:
 
-## Настройка (один раз)
+1. `git push` в ветку `main`.
+2. Не позже чем через 3 минуты таймер `airscope-deploy.timer` на сервере забирает новый коммит и выкладывает `site/` в `/srv/www/air-scope.ru` (`rsync --delete`).
+3. Caddy отдает папку по адресу https://air-scope.ru; `www.air-scope.ru` переадресуется на основной адрес. Сертификат Let's Encrypt Caddy выпускает и продлевает сам.
 
-1. В панели REG.RU привязать домен `air-scope.ru` к услуге хостинга.
-2. В панели хостинга взять реквизиты FTP: адрес сервера, логин и пароль.
-3. В репозитории открыть Settings → Secrets and variables → Actions и добавить секреты:
-   - `FTP_SERVER` — адрес FTP-сервера хостинга;
-   - `FTP_USERNAME` — логин FTP;
-   - `FTP_PASSWORD` — пароль FTP.
-4. Если папка сайта на хостинге называется иначе, чем `www/air-scope.ru/`, добавить на вкладке Variables переменную `FTP_DIR` с путем к ней (со слешем в конце).
-5. Если хостинг не принимает защищенное соединение, добавить переменную `FTP_PROTOCOL` со значением `ftp`.
+Репозиторий открытый, поэтому серверу не нужен ключ доступа к GitHub.
 
-Пароли в репозиторий не записываются: они хранятся только в секретах GitHub.
+На сервере:
+
+| Путь | Что |
+|---|---|
+| `/srv/src/airscope-site` | клон этого репозитория |
+| `/srv/infra/deploy-airscope.sh` | скрипт выкладки: fetch → reset → rsync `site/` |
+| `/etc/systemd/system/airscope-deploy.{service,timer}` | запуск скрипта от пользователя `deploy` каждые 3 минуты |
+| `/srv/src/.deployed-rev-airscope` | последний выложенный коммит |
+| `/srv/www/air-scope.ru` | выложенный сайт |
+| `/srv/infra/Caddyfile` | блоки `air-scope.ru` и `www.air-scope.ru` в конце файла |
+
+Команды на сервере:
+
+```bash
+journalctl -u airscope-deploy -f                  # журнал выкладки
+sudo systemctl start airscope-deploy              # выложить сейчас, не дожидаясь таймера
+sudo -u deploy FORCE=1 /srv/infra/deploy-airscope.sh   # выложить заново без нового коммита
+```
+
+## DNS
+
+Домен `air-scope.ru` зарегистрирован в REG.RU. Записи A для `@` и `www` указывают на 80.78.248.203.
 
 ## Локальный просмотр
 
