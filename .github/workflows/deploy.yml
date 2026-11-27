@@ -1,4 +1,4 @@
-name: Выкладка на airscope.ru
+name: Выкладка на air-scope.ru
 
 on:
   push:
@@ -39,4 +39,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
           local-dir: ./site/
-          server-dir: ${{ vars.FTP_DIR || 'www/airscope.ru/' }}
+          server-dir: ${{ vars.FTP_DIR || 'www/air-scope.ru/' }}
